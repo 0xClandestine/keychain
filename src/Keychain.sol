@@ -7,6 +7,7 @@ import "solmate/auth/Owned.sol";
 error MissingKey();
 error InvalidKey();
 error CallFailed();
+error DoorLocked();
 
 contract Keychain is ERC721("Keychain", "KEY") {
 
@@ -52,6 +53,8 @@ contract Keychain is ERC721("Keychain", "KEY") {
 
     mapping(address => uint256) public nonces;
 
+    mapping(address => bool) public isLocked;
+
     mapping(uint256 => mapping(address => bool)) public doesKeyFit;
 
     // ----------------------------------------------------------
@@ -79,6 +82,8 @@ contract Keychain is ERC721("Keychain", "KEY") {
             key = ++totalSupply;
         }
 
+        if (isLocked[door]) revert DoorLocked();
+
         _mint(to, key);
 
         doesKeyFit[key][door] = true;
@@ -90,6 +95,8 @@ contract Keychain is ERC721("Keychain", "KEY") {
 
         if (msg.sender != _ownerOf[key]) revert MissingKey();
 
+        if (isLocked[door]) revert DoorLocked();
+
         doesKeyFit[key][door] = true;
 
         emit LockCreated(msg.sender, door, key);
@@ -99,7 +106,9 @@ contract Keychain is ERC721("Keychain", "KEY") {
 
         if (msg.sender != _ownerOf[key]) revert MissingKey();
 
-        doesKeyFit[key][door] = false;
+        if (isLocked[door]) revert DoorLocked();
+
+        delete doesKeyFit[key][door];
 
         emit LockDestroyed(msg.sender, door, key);
     }
