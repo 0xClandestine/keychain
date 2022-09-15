@@ -8,6 +8,7 @@ error MissingKey();
 error InvalidKey();
 error CallFailed();
 error DoorLocked();
+error DoorUnlocked();
 
 contract Keychain is ERC721("Keychain", "KEY") {
 
@@ -106,7 +107,9 @@ contract Keychain is ERC721("Keychain", "KEY") {
 
         if (msg.sender != _ownerOf[key]) revert MissingKey();
 
-        if (isLocked[door]) revert DoorLocked();
+        if (!isLocked[door]) revert DoorUnlocked();
+
+        delete isLocked[door];
 
         delete doesKeyFit[key][door];
 
