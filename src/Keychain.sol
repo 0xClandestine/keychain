@@ -32,6 +32,12 @@ contract Keychain is ERC721("Keychain", "KEY") {
         uint256 indexed key
     );
 
+    event LockDestroyed(
+        address indexed owner, 
+        address indexed door, 
+        uint256 indexed key
+    );
+
     event KeyUsed(
         address indexed owner, 
         address indexed door, 
@@ -82,11 +88,20 @@ contract Keychain is ERC721("Keychain", "KEY") {
 
     function createLock(uint256 key, address door) external {
 
-        if (msg.sender != ownerOf(key)) revert MissingKey();
+        if (msg.sender != _ownerOf[key]) revert MissingKey();
 
         doesKeyFit[key][door] = true;
 
         emit LockCreated(msg.sender, door, key);
+    }
+
+    function destroyLock(uint256 key, address door) external {
+
+        if (msg.sender != _ownerOf[key]) revert MissingKey();
+
+        doesKeyFit[key][door] = false;
+
+        emit LockDestroyed(msg.sender, door, key);
     }
 
     function execute(uint256 key, address door, bytes calldata data) external payable {
@@ -146,7 +161,7 @@ contract Keychain is ERC721("Keychain", "KEY") {
             require(newOwner != address(0), "INVALID_RECIPIENT");
 
         }
-        
+
         // Underflow of the sender's balance is impossible because we check for
         // ownership above and the recipient's balance can't realistically overflow.
         unchecked {
