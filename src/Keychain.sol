@@ -191,10 +191,6 @@ contract Keychain is ERC721("Keychain", "KEY") {
         emit KeyRecovered(owner, newOwner, key);
     }
 
-    // ----------------------------------------------------------
-    // EIP-4494 Logic
-    // ----------------------------------------------------------
-
     function DOMAIN_SEPARATOR() public view virtual returns (bytes32) {
         return block.chainid == INITIAL_CHAIN_ID ? INITIAL_DOMAIN_SEPARATOR : computeDomainSeparator();
     }
