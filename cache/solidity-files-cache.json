@@ -369,8 +369,8 @@
       }
     },
     "/mnt/c/Users/0xClandestine/Desktop/keychain/src/Keychain.sol": {
-      "lastModificationDate": 1663235661220,
-      "contentHash": "b2ca19d867ddf47530240f6066c86ea2",
+      "lastModificationDate": 1663331793389,
+      "contentHash": "f18a1116e145f14ca38c8a11c975a9c7",
       "sourceName": "src/Keychain.sol",
       "solcConfig": {
         "settings": {
@@ -408,10 +408,10 @@
         }
       }
     },
-    "/mnt/c/Users/0xClandestine/Desktop/keychain/src/test/Contract.t.sol": {
-      "lastModificationDate": 1663234421208,
-      "contentHash": "3be58f6a37e0f0ea7eb1af4f64cd5f49",
-      "sourceName": "src/test/Contract.t.sol",
+    "/mnt/c/Users/0xClandestine/Desktop/keychain/src/test/Keychain.t.sol": {
+      "lastModificationDate": 1663332730166,
+      "contentHash": "ff161f5e9a5b5c491b2c4a7f6a794fa5",
+      "sourceName": "src/test/Keychain.t.sol",
       "solcConfig": {
         "settings": {
           "optimizer": {
@@ -452,7 +452,10 @@
       "versionRequirement": ">=0.8.0",
       "artifacts": {
         "KeychainTest": {
-          "0.8.13+commit.abaa5c0e.Linux.gcc": "Contract.t.sol/KeychainTest.json"
+          "0.8.13+commit.abaa5c0e.Linux.gcc": "Keychain.t.sol/KeychainTest.json"
+        },
+        "OwnedContract": {
+          "0.8.13+commit.abaa5c0e.Linux.gcc": "Keychain.t.sol/OwnedContract.json"
         }
       }
     }

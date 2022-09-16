@@ -85,9 +85,11 @@ contract Keychain is ERC721("Keychain", "KEY") {
 
         if (isLocked[door]) revert DoorLocked();
 
-        _mint(to, key);
+        isLocked[door] = true;
 
         doesKeyFit[key][door] = true;
+
+        _mint(to, key);
 
         emit KeyCreated(to, door, key);
     }
@@ -96,7 +98,9 @@ contract Keychain is ERC721("Keychain", "KEY") {
 
         if (msg.sender != _ownerOf[key]) revert MissingKey();
 
-        if (isLocked[door]) revert DoorLocked();
+        if (isLocked[door] || doesKeyFit[key][door]) revert DoorLocked();
+
+        isLocked[door] = true;
 
         doesKeyFit[key][door] = true;
 
