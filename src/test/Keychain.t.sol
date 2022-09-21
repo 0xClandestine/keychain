@@ -5,7 +5,6 @@ import "forge-std/Test.sol";
 
 import "../Keychain.sol";
 
-
 contract OwnedContract is Owned {
 
     constructor() Owned(msg.sender) {}
@@ -24,17 +23,12 @@ contract KeychainTest is Test {
     function setUp() public {
 
         door = new OwnedContract();
-        
         keychain = new Keychain();
     
         // NOTE: you MUST always create key BEFORE transfering 
         // contract ownership/authorization otherwise somebody 
         // can frontrun key creation.
-        uint256 key = keychain
-            .createKey(
-                address(this), 
-                address(door)
-            );
+        uint256 key = keychain.createKey(address(this), address(door));
         
         door.setOwner(address(keychain));
     }
