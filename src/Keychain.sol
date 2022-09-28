@@ -1,9 +1,8 @@
 // SPDX-License-Identifier: WTFPL
 pragma solidity >=0.8.0;
 
-import "solmate/auth/Owned.sol";
-import "solady/utils/Multicallable.sol";
-import "./ERC721Permit.sol";
+import {Owned} from "solbase/auth/Owned.sol";
+import {ERC721Permit} from "solbase/tokens/ERC721/extensions/ERC721Permit.sol";
 
 error MissingKey();
 error InvalidKey();
@@ -11,7 +10,7 @@ error CallFailed();
 error DoorLocked();
 error DoorUnlocked();
 
-contract Keychain is ERC721Permit("Keychain", "KEY"), Multicallable {
+contract Keychain is ERC721Permit("Keychain", "KEY") {
 
     // ----------------------------------------------------------
     // Events
