@@ -40,11 +40,7 @@
       },
       "imports": [],
       "versionRequirement": ">=0.5.0",
-      "artifacts": {
-        "DSTest": {
-          "0.8.13+commit.abaa5c0e.Linux.gcc": "test.sol/DSTest.json"
-        }
-      }
+      "artifacts": {}
     },
     "/mnt/c/Users/0xClandestine/Desktop/keychain/lib/forge-std/src/Script.sol": {
       "lastModificationDate": 1663234210286,
@@ -82,11 +78,7 @@
         "lib/forge-std/src/console2.sol"
       ],
       "versionRequirement": ">=0.6.0, <0.9.0",
-      "artifacts": {
-        "Script": {
-          "0.8.13+commit.abaa5c0e.Linux.gcc": "Script.sol/Script.json"
-        }
-      }
+      "artifacts": {}
     },
     "/mnt/c/Users/0xClandestine/Desktop/keychain/lib/forge-std/src/StdJson.sol": {
       "lastModificationDate": 1663234210289,
@@ -121,11 +113,7 @@
         "lib/forge-std/src/Vm.sol"
       ],
       "versionRequirement": ">=0.6.0, <0.9.0",
-      "artifacts": {
-        "stdJson": {
-          "0.8.13+commit.abaa5c0e.Linux.gcc": "StdJson.sol/stdJson.json"
-        }
-      }
+      "artifacts": {}
     },
     "/mnt/c/Users/0xClandestine/Desktop/keychain/lib/forge-std/src/Test.sol": {
       "lastModificationDate": 1663234210292,
@@ -165,20 +153,7 @@
         "lib/forge-std/src/console2.sol"
       ],
       "versionRequirement": ">=0.6.0, <0.9.0",
-      "artifacts": {
-        "Test": {
-          "0.8.13+commit.abaa5c0e.Linux.gcc": "Test.sol/Test.json"
-        },
-        "stdError": {
-          "0.8.13+commit.abaa5c0e.Linux.gcc": "Test.sol/stdError.json"
-        },
-        "stdMath": {
-          "0.8.13+commit.abaa5c0e.Linux.gcc": "Test.sol/stdMath.json"
-        },
-        "stdStorage": {
-          "0.8.13+commit.abaa5c0e.Linux.gcc": "Test.sol/stdStorage.json"
-        }
-      }
+      "artifacts": {}
     },
     "/mnt/c/Users/0xClandestine/Desktop/keychain/lib/forge-std/src/Vm.sol": {
       "lastModificationDate": 1663234210294,
@@ -211,11 +186,7 @@
       },
       "imports": [],
       "versionRequirement": ">=0.6.0, <0.9.0",
-      "artifacts": {
-        "Vm": {
-          "0.8.13+commit.abaa5c0e.Linux.gcc": "Vm.sol/Vm.json"
-        }
-      }
+      "artifacts": {}
     },
     "/mnt/c/Users/0xClandestine/Desktop/keychain/lib/forge-std/src/console.sol": {
       "lastModificationDate": 1663234210297,
@@ -248,11 +219,7 @@
       },
       "imports": [],
       "versionRequirement": ">=0.4.22, <0.9.0",
-      "artifacts": {
-        "console": {
-          "0.8.13+commit.abaa5c0e.Linux.gcc": "console.sol/console.json"
-        }
-      }
+      "artifacts": {}
     },
     "/mnt/c/Users/0xClandestine/Desktop/keychain/lib/forge-std/src/console2.sol": {
       "lastModificationDate": 1663234210299,
@@ -285,11 +252,7 @@
       },
       "imports": [],
       "versionRequirement": ">=0.4.22, <0.9.0",
-      "artifacts": {
-        "console2": {
-          "0.8.13+commit.abaa5c0e.Linux.gcc": "console2.sol/console2.json"
-        }
-      }
+      "artifacts": {}
     },
     "/mnt/c/Users/0xClandestine/Desktop/keychain/lib/solady/src/utils/Multicallable.sol": {
       "lastModificationDate": 1663733164722,
@@ -322,11 +285,7 @@
       },
       "imports": [],
       "versionRequirement": "^0.8.4",
-      "artifacts": {
-        "Multicallable": {
-          "0.8.13+commit.abaa5c0e.Linux.gcc": "Multicallable.sol/Multicallable.json"
-        }
-      }
+      "artifacts": {}
     },
     "/mnt/c/Users/0xClandestine/Desktop/keychain/lib/solmate/src/auth/Owned.sol": {
       "lastModificationDate": 1663234251937,
@@ -359,11 +318,7 @@
       },
       "imports": [],
       "versionRequirement": ">=0.8.0",
-      "artifacts": {
-        "Owned": {
-          "0.8.13+commit.abaa5c0e.Linux.gcc": "Owned.sol/Owned.json"
-        }
-      }
+      "artifacts": {}
     },
     "/mnt/c/Users/0xClandestine/Desktop/keychain/lib/solmate/src/tokens/ERC721.sol": {
       "lastModificationDate": 1663234252111,
@@ -396,18 +351,79 @@
       },
       "imports": [],
       "versionRequirement": ">=0.8.0",
-      "artifacts": {
-        "ERC721": {
-          "0.8.13+commit.abaa5c0e.Linux.gcc": "ERC721.sol/ERC721.json"
-        },
-        "ERC721TokenReceiver": {
-          "0.8.13+commit.abaa5c0e.Linux.gcc": "ERC721.sol/ERC721TokenReceiver.json"
+      "artifacts": {}
+    },
+    "/mnt/c/Users/0xClandestine/Desktop/keychain/src/EIP712.sol": {
+      "lastModificationDate": 1663906433462,
+      "contentHash": "e03417ee710f4a51dd0bead4df02ae0f",
+      "sourceName": "src/EIP712.sol",
+      "solcConfig": {
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "metadata": {
+            "bytecodeHash": "ipfs"
+          },
+          "outputSelection": {
+            "*": {
+              "": [
+                "ast"
+              ],
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers"
+              ]
+            }
+          },
+          "evmVersion": "london"
         }
-      }
+      },
+      "imports": [],
+      "versionRequirement": "^0.8.4",
+      "artifacts": {}
+    },
+    "/mnt/c/Users/0xClandestine/Desktop/keychain/src/ERC721Permit.sol": {
+      "lastModificationDate": 1663904910528,
+      "contentHash": "a71fb341b23e28339b9d8241d8c9dcd8",
+      "sourceName": "src/ERC721Permit.sol",
+      "solcConfig": {
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "metadata": {
+            "bytecodeHash": "ipfs"
+          },
+          "outputSelection": {
+            "*": {
+              "": [
+                "ast"
+              ],
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers"
+              ]
+            }
+          },
+          "evmVersion": "london"
+        }
+      },
+      "imports": [
+        "lib/solmate/src/tokens/ERC721.sol"
+      ],
+      "versionRequirement": ">=0.8.0",
+      "artifacts": {}
     },
     "/mnt/c/Users/0xClandestine/Desktop/keychain/src/Keychain.sol": {
-      "lastModificationDate": 1663733282384,
-      "contentHash": "c4454d57441c65ac49f87eae0f9c7061",
+      "lastModificationDate": 1663899847889,
+      "contentHash": "021ace69ee446ebcac37be1ff1a87d88",
       "sourceName": "src/Keychain.sol",
       "solcConfig": {
         "settings": {
@@ -437,14 +453,94 @@
       "imports": [
         "lib/solady/src/utils/Multicallable.sol",
         "lib/solmate/src/auth/Owned.sol",
-        "lib/solmate/src/tokens/ERC721.sol"
+        "lib/solmate/src/tokens/ERC721.sol",
+        "src/ERC721Permit.sol"
       ],
       "versionRequirement": ">=0.8.0",
-      "artifacts": {
-        "Keychain": {
-          "0.8.13+commit.abaa5c0e.Linux.gcc": "Keychain.sol/Keychain.json"
+      "artifacts": {}
+    },
+    "/mnt/c/Users/0xClandestine/Desktop/keychain/src/Test.sol": {
+      "lastModificationDate": 1663870846919,
+      "contentHash": "d452358b5e73fa2832e4d9e9a3c7d2b5",
+      "sourceName": "src/Test.sol",
+      "solcConfig": {
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "metadata": {
+            "bytecodeHash": "ipfs"
+          },
+          "outputSelection": {
+            "*": {
+              "": [
+                "ast"
+              ],
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers"
+              ]
+            }
+          },
+          "evmVersion": "london"
         }
-      }
+      },
+      "imports": [
+        "lib/forge-std/lib/ds-test/src/test.sol",
+        "lib/forge-std/src/Script.sol",
+        "lib/forge-std/src/StdJson.sol",
+        "lib/forge-std/src/Test.sol",
+        "lib/forge-std/src/Vm.sol",
+        "lib/forge-std/src/console.sol",
+        "lib/forge-std/src/console2.sol"
+      ],
+      "versionRequirement": ">=0.8.0",
+      "artifacts": {}
+    },
+    "/mnt/c/Users/0xClandestine/Desktop/keychain/src/test/EIP712.t.sol": {
+      "lastModificationDate": 1663906292805,
+      "contentHash": "78bb09aeca576e6578d1355d3c08471f",
+      "sourceName": "src/test/EIP712.t.sol",
+      "solcConfig": {
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "metadata": {
+            "bytecodeHash": "ipfs"
+          },
+          "outputSelection": {
+            "*": {
+              "": [
+                "ast"
+              ],
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers"
+              ]
+            }
+          },
+          "evmVersion": "london"
+        }
+      },
+      "imports": [
+        "lib/forge-std/lib/ds-test/src/test.sol",
+        "lib/forge-std/src/Script.sol",
+        "lib/forge-std/src/StdJson.sol",
+        "lib/forge-std/src/Test.sol",
+        "lib/forge-std/src/Vm.sol",
+        "lib/forge-std/src/console.sol",
+        "lib/forge-std/src/console2.sol",
+        "src/EIP712.sol"
+      ],
+      "versionRequirement": "^0.8.4",
+      "artifacts": {}
     },
     "/mnt/c/Users/0xClandestine/Desktop/keychain/src/test/Keychain.t.sol": {
       "lastModificationDate": 1663644202762,
@@ -486,17 +582,11 @@
         "lib/solady/src/utils/Multicallable.sol",
         "lib/solmate/src/auth/Owned.sol",
         "lib/solmate/src/tokens/ERC721.sol",
+        "src/ERC721Permit.sol",
         "src/Keychain.sol"
       ],
       "versionRequirement": ">=0.8.0",
-      "artifacts": {
-        "KeychainTest": {
-          "0.8.13+commit.abaa5c0e.Linux.gcc": "Keychain.t.sol/KeychainTest.json"
-        },
-        "OwnedContract": {
-          "0.8.13+commit.abaa5c0e.Linux.gcc": "Keychain.t.sol/OwnedContract.json"
-        }
-      }
+      "artifacts": {}
     }
   }
 }
